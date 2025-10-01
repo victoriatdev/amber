@@ -50,7 +50,7 @@ python app.py
 - `/error` — Intentionally raises an exception for testing
 
 ## ./load-testing --optional true
-Example with `hey`:
+Example with [`hey`](https://github.com/rakyll/hey):
 ```bash
 hey -z 30s -q 20 http://localhost:8000/
 ```

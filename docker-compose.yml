@@ -1,4 +1,3 @@
-
 version: "3.9"
 services:
   amber:
@@ -9,7 +8,7 @@ services:
 
   prometheus:
     image: prom/prometheus:v2.54.1
-    container_name: prometheus
+    container_name: amber-prometheus
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     command:
@@ -21,7 +20,7 @@ services:
 
   grafana:
     image: grafana/grafana:11.2.0
-    container_name: grafana
+    container_name: amber-grafana
     ports:
       - "3000:3000"
     environment:

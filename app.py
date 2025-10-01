@@ -1,4 +1,3 @@
-
 from flask import Flask, jsonify, request, g
 import time
 import os
@@ -54,7 +53,7 @@ def index():
     return jsonify(
         {
             "app": "Amber",
-            "message": "Hello from Amber 💎",
+            "message": "Hello from Amber!",
             "docs": "/readme",
             "health": "/health",
             "metrics": "/metrics"
