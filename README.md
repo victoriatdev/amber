@@ -13,7 +13,7 @@ docker compose up --build
 - Prometheus: http://localhost:9090
 - Grafana: http://localhost:3000 (admin/admin)
 
-In Grafana, add a Prometheus data source with URL `http://prometheus:9090`. Then create a dashboard with these queries:
+In Grafana, add a Prometheus data source with URL `http://host.docker.internal:9090` if using Docker to host or `http://localhost:9090` otherwise. Then create a dashboard with these queries:
 
 - Requests by status:
   ```promql
