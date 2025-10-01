@@ -1,0 +1,9 @@
+
+# After docker-compose up, open http://localhost:3000 (admin/admin) → add Prometheus data source:
+# URL: http://prometheus:9090
+# Then import dashboard:
+# Create a new dashboard with panels for:
+# - amber_http_requests_total (by endpoint, http_status)
+# - amber_request_latency_seconds_bucket (heatmap or histogram)
+# - amber_http_errors_total
+# - amber_uptime_seconds
