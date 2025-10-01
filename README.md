@@ -1,10 +1,8 @@
+# Amber - SRE-Focused Demo Application
 
-# Amber 💎 — Tiny SRE Demo App
+Amber is a minimal Flask service instrumented with Prometheus metrics to practice monitoring, alerting, autoscaling, chaos testing, and incident response.
 
-Amber is a minimal Flask service instrumented with Prometheus metrics so you can practice monitoring, alerting, autoscaling, chaos testing, and incident response.
-
-## Quick Start (Docker Compose)
-
+## ./quickstart
 ```bash
 docker compose up --build
 ```
@@ -37,8 +35,7 @@ In Grafana, add a Prometheus data source with URL `http://prometheus:9090`. Then
   amber_uptime_seconds
   ```
 
-## Local Dev
-
+## ./dev --local
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -46,22 +43,19 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Endpoints
-
+## ./endpoints
 - `/` — JSON hello with links
 - `/health` — Liveness check (HTTP 200)
 - `/metrics` — Prometheus exposition format
 - `/error` — Intentionally raises an exception for testing
 
-## Load Testing (optional)
-
+## ./load-testing --optional true
 Example with `hey`:
 ```bash
 hey -z 30s -q 20 http://localhost:8000/
 ```
 
-## Next Steps for SRE Practice
-
+## ./todo
 - Add readiness checks (DB ping, cache check)
 - Define SLIs/SLOs; add burn-rate alerts in Prometheus
 - Deploy to Kubernetes; add HPA
